@@ -11,8 +11,8 @@
         "google tag manager"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/la-haute-societe/craft-google-tag-manager",
+        "issues": "https://github.com/la-haute-societe/craft-google-tag-manager/issues"
     },
     "license": "MIT",
     "authors": [
