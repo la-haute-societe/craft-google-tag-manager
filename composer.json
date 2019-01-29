@@ -1,0 +1,40 @@
+{
+    "name": "la-haute-societe/google-tag-manager",
+    "description": "Google Tag Manager",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "google tag manager"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "La Haute Société",
+            "homepage": "https://www.lahautesociete.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "lhs\\googletagmanager\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Google Tag Manager",
+        "handle": "google-tag-manager",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "lhs\\googletagmanager\\GoogleTagManager"
+    }
+}

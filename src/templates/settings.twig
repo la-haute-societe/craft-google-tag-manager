@@ -1,0 +1,24 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * google-tag-manager plugin for Craft CMS 3.x
+ *
+ * google-tag-manager Settings.twig
+ *
+ * @author    La Haute Société
+ * @copyright Copyright (c) 2019 La Haute Société
+ * @link      https://www.lahautesociete.com
+ * @package   Googletagmanager
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Google Tag Manager - Container ID',
+    id: 'containerID',
+    name: 'containerID',
+    placeholder: 'GTM-XXXX',
+    value: settings['containerID']})
+}}
