@@ -1,6 +1,7 @@
 # Google Tag Manager plugin for Craft CMS 3.x
 
-Google Tag Manager
+This plugin allows you to configure the "ContainerID" from the control panel 
+and inject the GTM tags into the template.
 
 ![Screenshot](resources/img/plugin-screenshot.png)
 
@@ -22,10 +23,6 @@ To install the plugin, follow these instructions.
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Google Tag Manager.
 
-## Google Tag Manager Overview
-
-This plugin allows you to configure the "ContainerID" from the control panel 
-and inject the GTM tags into the template.
 
 ## Configuring Google Tag Manager
 
