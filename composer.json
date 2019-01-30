@@ -1,6 +1,6 @@
 {
     "name": "la-haute-societe/craft-google-tag-manager",
-    "description": "Google Tag Manager",
+    "description": "This Craft 3 plugin allows you to configure the Google Tag Manage \"ContainerID\" from the control panel and inject the GTM tags into the template.",
     "type": "craft-plugin",
     "version": "1.0.0-beta.1",
     "keywords": [

@@ -19,7 +19,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require la-haute-societe/google-tag-manager
+        composer require la-haute-societe/craft-google-tag-manager
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Google Tag Manager.
 
