@@ -78,6 +78,6 @@ class GoogleTagManagerVariable
             $data);
         \Craft::$app->view->setTemplateMode($oldMode);
 
-        return $html;
+        return new \Twig\Markup($html, 'UTF-8');
     }
 }
