@@ -34,12 +34,12 @@ You can configure the containerID from the Craft Control Panel.
 Copy the code below and paste it into you layout as high as possible in the `<head>` section 
 of the page:
 ```
-{{ craft.googleTagManager.headSection() }}
+{{ craft.googleTagManager.headSection() | raw }}
 ```
 
 You must also paste this code immediately after the opening tag `<body>`:
 ```
-{{ craft.googleTagManager.bodySection() }}
+{{ craft.googleTagManager.bodySection() | raw }}
 ```
 
 
