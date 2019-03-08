@@ -44,4 +44,6 @@ You must also paste this code immediately after the opening tag `<body>`:
 
 
 
-Brought to you by [La Haute Société](https://www.lahautesociete.com)
+Brought to you by [![Logo](resources/img/lhs.png)][lhs-site] La Haute Société
+
+[lhs-site]: https://www.lahautesociete.com
