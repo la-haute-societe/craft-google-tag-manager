@@ -10,15 +10,11 @@
 
 namespace lhs\googletagmanager;
 
-use lhs\googletagmanager\variables\GoogleTagManagerVariable;
-use lhs\googletagmanager\models\Settings;
-
 use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
 use craft\web\twig\variables\CraftVariable;
-
+use lhs\googletagmanager\models\Settings;
+use lhs\googletagmanager\variables\GoogleTagManagerVariable;
 use yii\base\Event;
 
 /**

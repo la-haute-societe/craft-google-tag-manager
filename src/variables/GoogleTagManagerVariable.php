@@ -10,10 +10,9 @@
 
 namespace lhs\googletagmanager\variables;
 
+use Craft;
 use craft\web\View;
 use lhs\googletagmanager\GoogleTagManager;
-
-use Craft;
 
 /**
  * @author    La Haute Société
