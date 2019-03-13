@@ -34,7 +34,7 @@ class GoogleTagManagerVariable
         $containerID = GoogleTagManager::getInstance()->getSettings()->containerID;
 
         if (!$containerID) {
-            return '<!-- GoogleTagManage plugin : containerID is not set -->';
+            return new \Twig\Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
         return $this->renderPluginTemplate('head', [
@@ -52,7 +52,7 @@ class GoogleTagManagerVariable
         $containerID = GoogleTagManager::getInstance()->getSettings()->containerID;
 
         if (!$containerID) {
-            return '<!-- GoogleTagManage plugin : containerID is not set -->';
+            return new \Twig\Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
         return $this->renderPluginTemplate('body', [

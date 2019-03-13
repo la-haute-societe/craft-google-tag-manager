@@ -1,5 +1,10 @@
 # Google Tag Manager Changelog
 
+## 1.0.2 - 2019-03-13
+
+### Fixed
+- Output issue when containerId was not set
+
 ## 1.0.1 - 2019-03-08
 
 ### Fixed
