@@ -1,5 +1,13 @@
 # Google Tag Manager Changelog
 
+## 1.1.0 - 2019-07-08
+
+### Added
+- Warning in the CP settings when a setting is overridden in the configuration  file
+
+### Fixed
+- Configuration file template was missing the containerID setting
+
 ## 1.0.2 - 2019-03-13
 
 ### Fixed

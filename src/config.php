@@ -23,5 +23,5 @@
  */
 
 return [
-
+    'containerID' => 'GTM-xxxxxxx',
 ];

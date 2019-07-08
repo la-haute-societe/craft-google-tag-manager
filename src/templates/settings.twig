@@ -15,10 +15,22 @@
 
 {% import "_includes/forms" as forms %}
 
+{% macro configWarning(setting) -%}
+    {% set setting = '<code>'~setting~'</code>' %}
+    {{ "This is being overridden by the {setting} config setting in your {file} config file."|t('contact-form', {
+        setting: '<code>'~setting~'</code>',
+        file: 'google-tag-manager.php'
+    })|raw }}
+{%- endmacro %}
+
+{% from _self import configWarning %}
+
 {{ forms.textField({
-    label: 'Google Tag Manager - Container ID',
-    id: 'containerID',
-    name: 'containerID',
+    label:       'Google Tag Manager - Container ID',
+    id:          'containerID',
+    name:        'containerID',
     placeholder: 'GTM-XXXX',
-    value: settings['containerID']})
-}}
+    value:       settings['containerID'],
+    disabled:    'containerID' in overrides,
+    warning:     'containerID' in overrides ? configWarning('containerID')
+}) }}
