@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## Unreleased
+
+
+## [2.0.0] - 2022-08-24
 ### Changed
 - [BREAKING]: Make the plugin compatible with Craft 4 (fixes [#3][])
 - Update plugin icon
@@ -32,9 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
+
 [#1]: https://github.com/la-haute-societe/craft-google-tag-manager/issues/1
 [#3]: https://github.com/la-haute-societe/craft-google-tag-manager/issues/3
 [1.0.0]: https://github.com/la-haute-societe/craft-google-tag-manager/releases/tag/1.0.0
 [1.0.1]: https://github.com/la-haute-societe/craft-google-tag-manager/compare/1.0.0...1.0.1
 [1.0.2]: https://github.com/la-haute-societe/craft-google-tag-manager/compare/1.0.1...1.0.2
 [1.1.0]: https://github.com/la-haute-societe/craft-google-tag-manager/compare/1.0.2...1.1.0
+[2.0.0]: https://github.com/la-haute-societe/craft-google-tag-manager/compare/1.1.0...2.0.0
