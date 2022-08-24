@@ -1,13 +1,13 @@
-# Google Tag Manager plugin for Craft CMS 3.x
+# Google Tag Manager plugin for Craft CMS
 
 This plugin allows you to configure the "ContainerID" from the control panel 
 and inject the GTM tags into the template.
 
-![Screenshot](resources/img/plugin-screenshot.png)
+![Screenshot](.readme/plugin-screenshot.png)
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 4.0.0 or later. Version 1.x of this plugin supports Craft CMS 3.x.
 
 ## Installation
 
@@ -31,7 +31,7 @@ You can configure the containerID from the Craft Control Panel.
 
 ## Using Google Tag Manager
 
-Copy the code below and paste it into you layout as high as possible in the `<head>` section 
+Copy the code below and paste it into your layout as high as possible in the `<head>` section 
 of the page:
 ```
 {{ craft.googleTagManager.headSection() }}
@@ -44,6 +44,5 @@ You must also paste this code immediately after the opening tag `<body>`:
 
 
 
-Brought to you by [![Logo](resources/img/lhs.png)][lhs-site] La Haute Société
-
-[lhs-site]: https://www.lahautesociete.com
+Brought to you by
+<a href="https://www.lahautesociete.com" target="_blank"><br><img src=".readme/logo-lahautesociete.png" height="100" alt="Logo La Haute Société" /></a>

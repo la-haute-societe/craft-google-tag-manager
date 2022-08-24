@@ -23,23 +23,17 @@ use craft\base\Model;
  */
 class Settings extends Model
 {
-    // Public Properties
-    // =========================================================================
-
     /**
      * Google Tag Manager - Container ID
      * @var string
      */
-    public $containerID = '';
-
-    // Public Methods
-    // =========================================================================
+    public string $containerID = '';
 
     /**
      * Returns the validation rules for attributes.
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             ['containerID', 'string'],

@@ -13,6 +13,11 @@ namespace lhs\googletagmanager\variables;
 use Craft;
 use craft\web\View;
 use lhs\googletagmanager\GoogleTagManager;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+use Twig\Markup;
+use yii\base\Exception;
 
 /**
  * @author    La Haute Société
@@ -21,20 +26,19 @@ use lhs\googletagmanager\GoogleTagManager;
  */
 class GoogleTagManagerVariable
 {
-    // Public Methods
-    // =========================================================================
-
     /**
-     * @return string
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @return string|Markup
+     * @throws Exception
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
-    public function headSection()
+    public function headSection(): string|Markup
     {
         $containerID = GoogleTagManager::getInstance()->getSettings()->containerID;
 
         if (!$containerID) {
-            return new \Twig\Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
+            return new Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
         return $this->renderPluginTemplate('head', [
@@ -43,16 +47,18 @@ class GoogleTagManagerVariable
     }
 
     /**
-     * @return string
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @return string|Markup
+     * @throws Exception
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
-    public function bodySection()
+    public function bodySection(): string|Markup
     {
         $containerID = GoogleTagManager::getInstance()->getSettings()->containerID;
 
         if (!$containerID) {
-            return new \Twig\Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
+            return new Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
         return $this->renderPluginTemplate('body', [
@@ -64,11 +70,13 @@ class GoogleTagManagerVariable
     /**
      * @param $template
      * @param $data
-     * @return string
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @return string|Markup
+     * @throws Exception
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
-    protected function renderPluginTemplate($template, $data)
+    protected function renderPluginTemplate($template, $data): string|Markup
     {
 
         $oldMode = \Craft::$app->view->getTemplateMode();
@@ -77,6 +85,6 @@ class GoogleTagManagerVariable
             $data);
         \Craft::$app->view->setTemplateMode($oldMode);
 
-        return new \Twig\Markup($html, 'UTF-8');
+        return new Markup($html, 'UTF-8');
     }
 }

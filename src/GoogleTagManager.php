@@ -11,6 +11,7 @@
 namespace lhs\googletagmanager;
 
 use Craft;
+use craft\base\Model;
 use craft\base\Plugin;
 use craft\web\twig\variables\CraftVariable;
 use lhs\googletagmanager\models\Settings;
@@ -27,29 +28,20 @@ use yii\base\Event;
  */
 class GoogleTagManager extends Plugin
 {
-    // Static Properties
-    // =========================================================================
-
     /**
      * @var GoogleTagManager
      */
-    public static $plugin;
-
-    // Public Properties
-    // =========================================================================
+    public static GoogleTagManager $plugin;
 
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.2';
-
-    // Public Methods
-    // =========================================================================
+    public string $schemaVersion = '1.0.2';
 
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;
@@ -57,7 +49,7 @@ class GoogleTagManager extends Plugin
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
-            function (Event $event) {
+            static function (Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
                 $variable->set('googleTagManager', GoogleTagManagerVariable::class);
@@ -74,13 +66,10 @@ class GoogleTagManager extends Plugin
         );
     }
 
-    // Protected Methods
-    // =========================================================================
-
     /**
      * @inheritdoc
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?Model
     {
         return new Settings();
     }
