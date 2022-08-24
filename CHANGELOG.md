@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Changed
 - [BREAKING]: Make the plugin compatible with Craft 4 (fixes [#3][])
+- Update plugin icon
 
 
 ## [1.1.0] - 2019-07-08
