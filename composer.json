@@ -36,5 +36,16 @@
         "hasCpSection": false,
         "changelogUrl": "https://github.com/la-haute-societe/craft-google-tag-manager/blob/master/CHANGELOG.md",
         "class": "lhs\\googletagmanager\\GoogleTagManager"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "craftcms/rector": "dev-main"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
