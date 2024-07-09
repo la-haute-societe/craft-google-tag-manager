@@ -2,7 +2,7 @@
     "name": "la-haute-societe/craft-google-tag-manager",
     "description": "Configure the Google Tag Manager \"Container ID\" from the Craft CMS control panel",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "2.0.1",
     "keywords": [
         "craft",
         "cms",
