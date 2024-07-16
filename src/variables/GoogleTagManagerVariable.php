@@ -20,9 +20,9 @@ use Twig\Markup;
 use yii\base\Exception;
 
 /**
- * @author    La Haute Société
- * @package   GoogleTagManager
- * @since     1.0.0
+ * @author  La Haute Société
+ * @package GoogleTagManager
+ * @since   1.0.0
  */
 class GoogleTagManagerVariable
 {
@@ -41,9 +41,11 @@ class GoogleTagManagerVariable
             return new Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
-        return $this->renderPluginTemplate('head', [
+        return $this->renderPluginTemplate(
+            'head', [
             'containerID' => $containerID,
-        ]);
+            ]
+        );
     }
 
     /**
@@ -61,15 +63,17 @@ class GoogleTagManagerVariable
             return new Markup('<!-- GoogleTagManage plugin : containerID is not set -->', 'UTF-8');
         }
 
-        return $this->renderPluginTemplate('body', [
+        return $this->renderPluginTemplate(
+            'body', [
             'containerID' => $containerID,
-        ]);
+            ]
+        );
     }
 
 
     /**
-     * @param $template
-     * @param $data
+     * @param  $template
+     * @param  $data
      * @return string|Markup
      * @throws Exception
      * @throws LoaderError
@@ -81,8 +85,10 @@ class GoogleTagManagerVariable
 
         $oldMode = \Craft::$app->view->getTemplateMode();
         \Craft::$app->view->setTemplateMode(View::TEMPLATE_MODE_CP);
-        $html = Craft::$app->getView()->renderTemplate(GoogleTagManager::$plugin->handle . '/sections/' . $template,
-            $data);
+        $html = Craft::$app->getView()->renderTemplate(
+            GoogleTagManager::$plugin->handle . '/sections/' . $template,
+            $data
+        );
         \Craft::$app->view->setTemplateMode($oldMode);
 
         return new Markup($html, 'UTF-8');

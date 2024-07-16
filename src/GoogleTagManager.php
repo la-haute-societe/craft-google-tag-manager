@@ -21,10 +21,9 @@ use yii\base\Event;
 /**
  * Class GoogleTagManager
  *
- * @author    La Haute Société
- * @package   GoogleTagManager
- * @since     1.0.0
- *
+ * @author  La Haute Société
+ * @package GoogleTagManager
+ * @since   1.0.0
  */
 class GoogleTagManager extends Plugin
 {
@@ -50,7 +49,9 @@ class GoogleTagManager extends Plugin
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
             static function (Event $event) {
-                /** @var CraftVariable $variable */
+                /**
+            * @var CraftVariable $variable 
+            */
                 $variable = $event->sender;
                 $variable->set('googleTagManager', GoogleTagManagerVariable::class);
             }

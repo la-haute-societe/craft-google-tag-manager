@@ -17,20 +17,22 @@ use craft\base\Model;
  *
  * https://craftcms.com/docs/plugins/models
  *
- * @author    La Haute Société
- * @package   Googletagmanager
- * @since     1.0.0
+ * @author  La Haute Société
+ * @package Googletagmanager
+ * @since   1.0.0
  */
 class Settings extends Model
 {
     /**
      * Google Tag Manager - Container ID
+     *
      * @var string
      */
     public string $containerID = '';
 
     /**
      * Returns the validation rules for attributes.
+     *
      * @return array
      */
     public function rules(): array
